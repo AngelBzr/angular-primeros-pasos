@@ -1,0 +1,58 @@
+<p>Dragon Ball Z</p><!--S5 - Capitulo 57 - Módulo DBZ-->
+<hr>
+
+<div class="row"><!--S6 - Capitulo 57 - Diseño de la pantalla a trabajar-->
+    <div class="col">
+        <app-personajes [personajes]="personajes">
+
+        </app-personajes>
+        <!--<h3>Personajes</h3>
+        <hr>
+        <ul>-->
+            <!-- <li>Krillin - 700</li>
+            <li>Goku - 15,000</li>
+            <li>Vegeta - 8,500</li> -->
+           <!-- <li *ngFor="let Personaje of personajes">
+                {{Personaje.nombre}} - {{Personaje.poder | number}}
+            </li>
+        </ul>-->
+    </div>
+
+    <div class="col">
+        <h3>Agregar <small>{{nuevo.nombre + nuevo.poder}}</small></h3>
+        <hr>
+
+        <!-- <form (submit)="agregar( $event )">Recibir el evento que se esta disparando -->
+
+        
+        <form (ngSubmit)="agregar()">
+            <input
+                type="text"
+                placeholder="Nombre"
+                name="nombre"
+                [(ngModel)]="nuevo.nombre"
+            />
+            <!--corchetes para establecer alguna propiedad a este objeto-->
+            <!--parentesis para emitir o escuchar eventos-->
+            <!-- <input
+                type="text"
+                placeholder="Nombre"
+                [value] = "nuevo.nombre"
+                (input) = "cambiarNombre( $event )"
+            /> -->
+            
+            <input
+                type="number"
+                placeholder="Poder"
+                name="poder"
+                [(ngModel)] = "nuevo.poder"
+            />
+            <!-- [value]="nuevo.poder" -->
+
+            <button type="submit">
+                Agregar
+            </button>
+
+        </form>
+    </div>
+</div>

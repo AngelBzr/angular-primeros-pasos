@@ -1,0 +1,52 @@
+<!-- S4 - Capitulo 46 - Crear componente de forma automática -->
+<!-- <p>listado asdas</p> -->
+
+<!-- S4 - Capitulo 47 - Directiva *ngFor -->
+<!-- <p>Listado de Heroes</p>
+
+<div>
+    <h3>Heroe Borrado</h3>
+    <span>{{heroeBorrado}}</span>
+</div>
+
+<button (click)="borrarHeroe()">Borrar</button>
+
+<ul>
+    <li *ngFor="let heroe of heroes; let i = index">
+        {{ i + 1 }} - {{ heroe }}
+    </li>
+</ul> -->
+
+<!-- S4 - Capitulo 48 - Directiva *ngIf -->
+<!-- <p>Listado de Heroes</p> -->
+
+<!-- <div *ngIf='heroeBorrado != ""'> -->
+<!-- <div *ngIf='heroeBorrado'>
+    <h3>Heroe Borrado: <small>{{heroeBorrado}}</small></h3>    
+</div>
+
+<button (click)="borrarHeroe()">Borrar</button>
+
+<ul>
+    <li *ngFor="let heroe of heroes; let i = index">
+        {{ i + 1 }} - {{ heroe }}
+    </li>
+</ul> -->
+
+<!-- S4 - Capitulo 49 - Ng-Template y el ngIf-else -->
+<p>Listado de Heroes</p>
+
+<div *ngIf='heroeBorrado; else noBorrado'>
+    <h3>Heroe Borrado: <small>{{heroeBorrado}}</small></h3>    
+</div>
+<ng-template #noBorrado><!--"#"Referencia local-->
+    <h3>No ha borrado nada</h3>
+</ng-template>
+
+<button (click)="borrarHeroe()">Borrar</button>
+
+<ul>
+    <li *ngFor="let heroe of heroes; let i = index">
+        {{ i + 1 }} - {{ heroe }}
+    </li>
+</ul>

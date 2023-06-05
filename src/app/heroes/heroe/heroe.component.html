@@ -1,0 +1,28 @@
+<!-- S4 - Capitulo 43 - Componente Heroe y se paracion de directorios -->
+<!-- <h1>Heroe Component Works</h1> -->
+
+<!-- S4 - Capitulo 44 - Cambios en el Template de Componente -->
+<!-- S4 - Capitulo 45 - Concepto de one way data binding - nelazado en una sola vía -->
+<h1>{{ nombre }}</h1>
+
+<dl>
+    <td>Nombre: </td>
+    <dd>{{ nombre }}</dd>
+
+    <td> Edad: </td>
+    <dd>{{ edad}}</dd>
+
+    <td> Función: </td>
+    <dd>{{ obtenerNombre() }}</dd>
+
+    <td> Capitalizado </td>
+    <dd>{{ nombreCapitalizado }}</dd>
+</dl>
+
+<button (click)="cambiarNombre()">
+    Cambiar Héroe
+</button>
+
+<button (click)="cambiarEdad()">
+    Cambiar Edad
+</button>
